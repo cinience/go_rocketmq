@@ -33,7 +33,4 @@ type Metadata struct {
 
 	// retry times to connect rocketmq's broker, optional
 	Retries int `json:"retries,string,omitempty"`
-
-	// topics to subscribe, use delimiter ',' to separate if more than one topics are configured, optional
-	Topics string `json:"topics,omitempty"`
 }
