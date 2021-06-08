@@ -36,6 +36,7 @@ func (mq *NativeRocketMQConsumer) Init(md *Metadata) error {
 
 	if md.Retries > 0 {
 		opts = append(opts, mqc.WithRetry(md.Retries))
+		opts = append(opts, mqc.WithMaxReconsumeTimes(int32(md.Retries)))
 	}
 
 	if len(md.ConsumerGroup) > 0 {
